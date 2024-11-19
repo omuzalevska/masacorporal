@@ -1,7 +1,6 @@
 package dev.omuzalevska.masacorporal;
 
-public class BmiModel {
-  // calcular el imc  
+public class BmiModel {  
 private Person person;
 
 public BmiModel(Person person){
@@ -21,16 +20,18 @@ public String giveResultsBMI(double bmi) {
         return "Severe thinnes";
     } else if (bmi < 17) {
         return "Moderate thinnes";
-    } else if (bmi < 20) {
-        return "Mild thinnes";
+    } else if (bmi < 18.5) {
+        return "Slight thinnes";
+    } else if (bmi < 25) {
+        return "Normal weight";
     } else if (bmi < 30) {
-        return "Normal thinnes";
-    } else if (bmi < 35) {
         return "Owerveight";
-    } else if (bmi < 40) {
+    } else if (bmi < 35) {
         return "Mild obesity";
-    }else {
-        return "none";
+    } else if (bmi < 40) {
+        return "Moderate obesity";
+    } else {
+        return "Morbid obesity";
     }
 
 }
